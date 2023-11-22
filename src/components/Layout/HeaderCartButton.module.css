@@ -1,7 +1,7 @@
 /* HeaderCartButton.module.css */
 
 .button {
-    background-color: #3c463d;
+    background-color: #505a51;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -15,8 +15,14 @@
   }
   
   .icon {
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
     margin-right: 0.5rem;
-  }
+}
   
   .badge {
     background-color: #ff5722;

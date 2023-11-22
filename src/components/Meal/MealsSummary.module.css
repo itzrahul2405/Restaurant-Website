@@ -1,0 +1,24 @@
+/* MealsSummary.module.css */
+
+.summary {
+    text-align: center;
+    max-width: 45rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0px 8px gold;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    color: plum;
+  }
+  
+  p {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
