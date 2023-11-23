@@ -1,4 +1,4 @@
-import classes from './MealItem.css'
+import classes from './MealItem.module.css'
 import MealItemForm from './MealItemForm';
 
 const MealItem = (props) => {

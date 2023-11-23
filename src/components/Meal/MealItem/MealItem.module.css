@@ -1,0 +1,25 @@
+
+.meal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .meal h3 {
+    margin: 0 0 0.25rem 0;
+    color: #333;
+  }
+  
+  .description {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #900;
+    font-size: 1.25rem;
+  }
