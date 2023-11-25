@@ -5,6 +5,8 @@ import CartContext from "../../store/cart-context";
 
 const Cart = (props) => {
   const cartCntx = useContext(CartContext);
+
+
   const cartItems = (
     <ul>
       {cartCntx.items.map((item) => (
@@ -12,7 +14,8 @@ const Cart = (props) => {
         <li>
           <div className="cart-item">
             <h2>{item.name} </h2>
-            ${item.price} <button>x 1</button>
+            ${item.price} 
+            <div className={classes.itemCounts}>x {item.quantity}</div>
           </div>
           <div className="cart-item-btns">
             <button>+</button>

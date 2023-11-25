@@ -27,6 +27,15 @@ ul {
     display: flex;
     align-items: center;
   }
+
+  .itemCounts{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(119, 119, 199);
+    text-align: center;
+  }
   
   button {
     background-color: #15cd1c;

@@ -6,6 +6,7 @@ const CartProvider = (props) => {
 
     const [items, updateItems] = useState([])
     const [totalAmount, updateTotalAmount] = useState(0)
+  
 
     // const addItemToCartHandler = (item) => {
     //     // cartContext.items.push(item)
@@ -32,6 +33,7 @@ const CartProvider = (props) => {
     
         // Update the total amount
         updateTotalAmount(totalAmount + item.price*item.quantity)
+
     };
     
 
