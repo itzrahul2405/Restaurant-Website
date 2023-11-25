@@ -1,0 +1,48 @@
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  h2{
+    color: black;
+  }
+
+
+  .cart-item-btns {
+    display: flex;
+    align-items: center;
+  }
+  
+  button {
+    background-color: #15cd1c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .button--alt {
+    background-color: #a3251c;
+  }
+  
+  .total {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

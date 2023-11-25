@@ -12,13 +12,14 @@ const HeaderCartButton = (props) => {
 
 
     const numberOfItems = cartCtx.items.reduce((curNumber, item) => {
+        // console.log(item.quantity, curNumber)
         return curNumber + Number(item.quantity);
     }, 0)
     
     return (  
     
         <button className={classes.button} onClick={props.onClick}>
-            <span className={classes.icon}>
+            <span className={classes.icon}> 
                 <CartIcon />
             </span>
             <span>Your Cart</span>
