@@ -13,10 +13,11 @@ const MealItem = (props) => {
                 <div className={classes.price}>{price}</div>
             </div>
             <div>
-                <MealItemForm />
+                {/* {console.log(props)} */}
+                <MealItemForm id={props.id} item={props} />
             </div>
         </li>
     );
 }
 
-export default MealItem;
+export default MealItem; 

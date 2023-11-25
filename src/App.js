@@ -3,6 +3,7 @@ import React, { useState } from 'react'    // we use useState in this file becau
 import Header from "./components/Layout/Header";
 import Meals from './components/Meal/Meals'
 import Cart from './components/Cart/Cart';
+import CartProvider from './store/CartProvider';
 
 
 
@@ -19,13 +20,13 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <CartProvider>
       {cartIsShown && <Cart  onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
-    </React.Fragment>
+    </CartProvider>
   );
 }
 
