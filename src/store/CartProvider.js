@@ -42,9 +42,16 @@ const CartProvider = (props) => {
 
     
 
-    const removeItemFromCartHandler = () => {}
+    const removeItemFromCartHandler = (itemId) => {
+        const itemToRemove = items.find((item) => item.id === itemId)
 
-    const cartContext = {
+        updateTotalAmount(totalAmount - itemToRemove.price)      
+
+        updateItems((prevItems) => prevItems.filter((item) => item.id !== itemId))
+
+    }
+
+    const cartContext = {   
         items: items,
         totalAmount: totalAmount,
         addItem: addItemToCartHandler,
