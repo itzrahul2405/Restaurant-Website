@@ -14,19 +14,24 @@ const Cart = (props) => {
   };
 
 
-  const removeItemQuantityHandler = (itemId) => {
-    const targetItem = cartCntx.items.find((item) => item.id === itemId )
-    if (targetItem && targetItem.quantity > 1) {
-      cartCntx.addItem({ ...targetItem, quantity: -1 });
-    } 
-    else if (targetItem && targetItem.quantity === 1) {
-      cartCntx.removeItem(itemId);
-    } 
-    else {
-      console.error("Item not found or quantity is already 0");
-    }
-  }
 
+  const removeItemQuantityHandler = (itemId) => {
+    const targetItem = cartCntx.items.find((item) => item.id === itemId);
+  
+    if (targetItem) {
+      if (targetItem.quantity > 1) {
+        // Decrease the quantity by 1
+        cartCntx.addItem({ ...targetItem, quantity: -1 });
+      } else {
+        // Remove the entire item from the cart
+        cartCntx.removeItem(itemId);
+      }
+    } else {
+      console.error("Item not found");
+    }
+  };
+  
+ 
 
   const cartItems = (
     <ul>
@@ -56,7 +61,7 @@ const Cart = (props) => {
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount: </span>
-        <span>{totalAmount}</span>
+        <span>{totalAmount.toFixed(2)}</span>
       </div>
       <div>
         <button className={classes["button--alt"]} onClick={props.onClose}>

@@ -8,14 +8,6 @@ const CartProvider = (props) => {
     const [totalAmount, updateTotalAmount] = useState(0)
   
 
-    // const addItemToCartHandler = (item) => {
-    //     // cartContext.items.push(item)
-    //     updateItems([...items, item])
-    //     updateTotalAmount(totalAmount + item.price*item.quantity)
-    //     console.log('inside addItemToCartHandler', cartContext)
-    // }
-
-
     const addItemToCartHandler = (item) => {
         // Check if the item is already in the cart
         const existingCartItem = items.find((cartItem) => cartItem.id === item.id);
@@ -37,17 +29,21 @@ const CartProvider = (props) => {
     };
     
 
-
-
-
     
 
     const removeItemFromCartHandler = (itemId) => {
         const itemToRemove = items.find((item) => item.id === itemId)
 
-        updateTotalAmount(totalAmount - itemToRemove.price)      
+              
 
         updateItems((prevItems) => prevItems.filter((item) => item.id !== itemId))
+
+        if(items.length === 1){
+            updateTotalAmount(0)
+        }
+        else{
+            updateTotalAmount(totalAmount - itemToRemove.price)
+        }
 
     }
 
